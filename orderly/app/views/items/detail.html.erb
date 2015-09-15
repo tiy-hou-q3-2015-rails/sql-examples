@@ -1,0 +1,17 @@
+<h1><%= @item.title %></h1>
+
+<h5>Category: <%= @item.category %></h5>
+<h6>Price: <%= number_to_currency (@item.price / 100.0) %></h6>
+<p>
+  <%= @item.description %>
+</p>
+
+<p>
+  Number of orders: <%= @item.orders.count %>
+</p>
+
+<ul>
+  <% @item.orders.each do |order| %>
+    <li><%= order.quantity %> by <%= order.user.name %></li>
+  <% end %>
+</ul>
