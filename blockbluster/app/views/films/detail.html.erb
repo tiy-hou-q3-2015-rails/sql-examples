@@ -1,0 +1,15 @@
+<h1><%= @film.title %></h1>
+
+<ul>
+  <li><strong>Description</strong> - <%= @film.description %></li>
+  <li><strong>Release Year</strong> - <%= @film.release_year %></li>
+  <li><strong>Rating</strong> - <%= @film.rating %></li>
+</ul>
+
+<h3>Actors</h3>
+
+<ul>
+  <% @film.actors.each do |actor| %>
+    <li><%= actor.first_name %> <%= actor.last_name %></li>
+  <% end %>
+</ul>
