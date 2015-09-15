@@ -1,0 +1,7 @@
+<h1>All States</h1>
+
+<% @states.each do |state| %>
+  <div>
+    <h2><%= link_to state.name, "/states/#{state.abbreviation}" %> has <%= pluralize state.cities.count, 'city' %>.</h2>
+  </div>
+<% end %>
